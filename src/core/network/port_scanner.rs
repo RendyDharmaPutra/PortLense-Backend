@@ -9,7 +9,7 @@ pub enum NetworkProtocol {
     UDP,
 }
 
-#[derive(Serialize)]
+#[derive(Debug, Serialize)]
 pub struct PortInfo {
     pub protocol: NetworkProtocol,
     pub ip: String,

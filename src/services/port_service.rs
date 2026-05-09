@@ -10,6 +10,9 @@ pub struct PortResponse {
 
 pub async fn get_ports_service() -> Vec<PortResponse> {
     let ports = get_used_ports().await;
+
+    // ? debug
+    // println!("{:?}", ports);
     
     ports
         .into_iter()
