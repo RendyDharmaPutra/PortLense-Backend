@@ -3,7 +3,7 @@ mod services;
 mod core;
 
 use axum::{routing::get, Router};
-use api::handlers::ports_handler;
+use api::handlers::port_handlers::ports_handler;
 
 #[tokio::main]
 async fn main() {

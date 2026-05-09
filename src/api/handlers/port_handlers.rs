@@ -1,4 +1,4 @@
-use crate::services::{get_ports_service, PortResponse};
+use crate::services::port_service::{get_ports_service, PortResponse};
 use axum::Json;
 
 pub async fn ports_handler() -> Json<Vec<PortResponse>> {

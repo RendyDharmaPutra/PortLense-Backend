@@ -1,5 +1,21 @@
-use super::models::{NetworkProtocol,PortInfo};
+
+use serde::Serialize;
 use netstat2::{get_sockets_info, AddressFamilyFlags, ProtocolFlags, ProtocolSocketInfo};
+
+
+#[derive(Debug, Serialize)]
+pub enum NetworkProtocol {
+    TCP,
+    UDP,
+}
+
+#[derive(Serialize)]
+pub struct PortInfo {
+    pub protocol: NetworkProtocol,
+    pub ip: String,
+    pub port: u16,
+}
+
 
 pub async fn get_used_ports() -> Vec<PortInfo> {
     let af_flags = AddressFamilyFlags::IPV4 | AddressFamilyFlags::IPV6;

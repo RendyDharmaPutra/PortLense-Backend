@@ -1,4 +1,4 @@
-use crate::core::get_used_ports;
+use crate::core::network::port_scanner::get_used_ports;
 use serde::Serialize;
 
 #[derive(Serialize)]
