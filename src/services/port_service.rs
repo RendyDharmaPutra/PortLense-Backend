@@ -1,5 +1,5 @@
-use crate::core::network::port_scanner::get_used_ports;
 use serde::Serialize;
+use crate::core::network::port_scanner::get_used_ports;
 
 #[derive(Serialize)]
 pub struct PortResponse {
