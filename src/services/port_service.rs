@@ -1,7 +1,6 @@
+use netstat2::error::Error;
 use crate::core::network::port_scanner::{PortInfo, get_used_ports};
 
-pub type PortResponse = PortInfo;
-
-pub async fn get_ports_service() -> Vec<PortResponse> {
+pub async fn get_ports_service() -> Result<Vec<PortInfo>, Error> {
     get_used_ports().await
 }
